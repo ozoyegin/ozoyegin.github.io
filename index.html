@@ -73,6 +73,21 @@
     .card p { margin: 0; color: var(--muted); }
     .card .text-link { display: inline-block; margin-top: 22px; color: var(--blue); font-weight: 750; text-decoration: none; }
     .card .text-link:hover { text-decoration: underline; }
+    .showcase { background: #eef7ff; border-top: 1px solid #dcecf9; border-bottom: 1px solid #dcecf9; }
+    .feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+    .feature { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 12px 30px rgba(34, 76, 115, .07); }
+    .feature.wide { grid-column: span 2; }
+    .feature img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; background: #e4edf7; }
+    .feature-copy { padding: 22px 24px 25px; }
+    .feature h3 { margin: 0; font-size: 1.23rem; letter-spacing: -.025em; }
+    .feature p { margin: 7px 0 0; color: var(--muted); }
+    .app-showcase { background: #f8fbff; }
+    .app-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .app-feature { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 12px 30px rgba(34, 76, 115, .07); }
+    .app-feature img { display: block; width: 100%; background: #203652; }
+    .app-feature-copy { padding: 20px 22px 23px; }
+    .app-feature h3 { margin: 0; font-size: 1.16rem; letter-spacing: -.025em; }
+    .app-feature p { margin: 7px 0 0; color: var(--muted); }
 
     .support { padding: 66px 0; background: #102d4f; color: #fff; }
     .support-box { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
@@ -89,7 +104,8 @@
       .nav { min-height: 66px; }
       nav { gap: 14px; font-size: .86rem; }
       .hero { padding: 64px 0 54px; }
-      .hero-grid, .cards { grid-template-columns: 1fr; gap: 24px; }
+      .hero-grid, .cards, .feature-grid, .app-grid { grid-template-columns: 1fr; gap: 24px; }
+      .feature.wide { grid-column: auto; }
       .hero-card { min-height: 270px; }
       section { padding: 54px 0; }
       .support-box, .footer-row { align-items: flex-start; flex-direction: column; }
@@ -117,7 +133,7 @@
           <p class="lead">I build focused tools that help language learners save useful words and phrases, revisit them at the right time, and turn everyday reading into practice.</p>
           <div class="actions">
             <a class="button primary" href="#apps">Explore Markit</a>
-            <a class="button secondary" href="https://ozoyegin.github.io/markit-privacy/privacy-policy.html">Privacy &amp; user guides</a>
+            <a class="button secondary" href="https://ozoyegin.github.io/markit-privacy/">Privacy &amp; user guides</a>
           </div>
         </div>
         <div class="hero-card" aria-label="Markit example card">
@@ -142,13 +158,121 @@
             <div class="icon" aria-hidden="true">▣</div>
             <h3>Markit for Android</h3>
             <p>Create lists, save words and phrases, listen to pronunciations, study with review modes, and keep your data on your device.</p>
-            <a class="text-link" href="https://play.google.com/store/apps/details?id=com.markit.highlighter.local">Get it on Google Play →</a>
+            <a class="text-link" href="https://play.google.com/store">Google Play availability →</a>
           </article>
           <article class="card mint">
             <div class="icon" aria-hidden="true">✦</div>
             <h3>Markit Highlighter</h3>
             <p>A Chrome extension for saving language from web pages and PDFs, with local lists, listening tools, and practice modes.</p>
-            <a class="text-link" href="https://chromewebstore.google.com/detail/nedcienekpjmhopbdkgicfbicpehnohg?utm_source=item-share-cb">Get it from Chrome Web Store →</a>
+            <a class="text-link" href="https://ozoyegin.github.io/markit-privacy/user-guide-addon.html">Read the extension guide →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="app-features" class="app-showcase">
+      <div class="shell">
+        <div class="section-heading">
+          <div class="eyebrow">Markit for Android</div>
+          <h2>Build a vocabulary habit that fits your day.</h2>
+          <p class="section-copy">From a new list to a completed review session, Markit helps you collect useful language, revisit it deliberately, and understand your progress.</p>
+        </div>
+        <div class="app-grid">
+          <article class="app-feature">
+            <img src="assets/app/organize-vocabulary.png" alt="Markit Android app showing vocabulary lists and daily study target" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Organise your vocabulary</h3>
+              <p>Create personal lists, see what is due, and set a daily learning target that works for you.</p>
+            </div>
+          </article>
+          <article class="app-feature">
+            <img src="assets/app/smart-study-modes.png" alt="Markit Android app showing Learn, Review Words and Game study modes" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Choose a smart study mode</h3>
+              <p>Learn new records in batches, review records when due, or practise a whole list in game modes.</p>
+            </div>
+          </article>
+          <article class="app-feature">
+            <img src="assets/app/level-up-memory.png" alt="Completed Markit review session showing records moving up vocabulary levels" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Strengthen long-term memory</h3>
+              <p>Successful answers advance records through levels, making your growing knowledge visible after every session.</p>
+            </div>
+          </article>
+          <article class="app-feature">
+            <img src="assets/app/vocabulary-games.png" alt="Markit Android app showing Match, Guess, Flashcards and Write games" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Practise with vocabulary games</h3>
+              <p>Use Match, Guess, Flashcards, and Write to practise in different ways and keep sessions engaging.</p>
+            </div>
+          </article>
+          <article class="app-feature">
+            <img src="assets/app/read-mark-listen.png" alt="Miray Browser in Markit with highlighted text and listening controls" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Read, mark, and listen</h3>
+              <p>Use the built-in Miray Browser to save language from web pages, keep its context, and listen as you read.</p>
+            </div>
+          </article>
+          <article class="app-feature">
+            <img src="assets/app/control-over-words.png" alt="Markit save record form with word, translation, and source sentence" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Stay in control of every record</h3>
+              <p>Edit the word or phrase, write your own translation, and keep the original source sentence before saving.</p>
+            </div>
+          </article>
+          <article class="app-feature">
+            <img src="assets/app/detailed-insights.png" alt="Markit Progress page with study time, daily goal, and weekly and monthly charts" loading="lazy">
+            <div class="app-feature-copy">
+              <h3>Track detailed insights</h3>
+              <p>Follow your daily target, time studied, due records, completion rate, and progress over the last 7 and 30 days.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlighter" class="showcase">
+      <div class="shell">
+        <div class="section-heading">
+          <div class="eyebrow">Markit Highlighter for Chrome</div>
+          <h2>Save language while you read.</h2>
+          <p class="section-copy">Highlight a useful word or phrase on a web page, keep its context, listen at your own pace, and add it to the list you are studying.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <img src="assets/highlighter/listen-while-reading.png" alt="Markit Highlighter reading controls beside highlighted web-page text" loading="lazy">
+            <div class="feature-copy">
+              <h3>Read and listen in context</h3>
+              <p>Use the floating reader controls to play, pause, repeat, adjust speed, and follow the text as you read.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <img src="assets/highlighter/select-and-save.png" alt="A phrase selected on a web page with the Add to Markit action" loading="lazy">
+            <div class="feature-copy">
+              <h3>Select a word or phrase</h3>
+              <p>Select the language you want to remember and add it directly from the page without losing your place.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <img src="assets/highlighter/add-translation.png" alt="Markit Translation form with a selected phrase and translation field" loading="lazy">
+            <div class="feature-copy">
+              <h3>Add your own translation</h3>
+              <p>Review the selected phrase, write a translation, and save it with the source context for later practice.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <img src="assets/highlighter/manage-lists.png" alt="Markit Highlighter list panel showing saved lists and progress" loading="lazy">
+            <div class="feature-copy">
+              <h3>Keep lists organised</h3>
+              <p>Choose where each record is saved, browse your lists, and see each list’s learning progress at a glance.</p>
+            </div>
+          </article>
+          <article class="feature wide">
+            <img src="assets/highlighter/study-progress.png" alt="Markit Highlighter panel showing today’s study goal, due items and lists" loading="lazy">
+            <div class="feature-copy">
+              <h3>Turn reading into a study habit</h3>
+              <p>See today’s goal, due items, and study time alongside your saved lists—then move from reading to practice whenever you are ready.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -165,7 +289,7 @@
             <div class="icon" aria-hidden="true">⌁</div>
             <h3>Privacy</h3>
             <p>Read how Markit handles data and what stays stored locally on your device or Chrome profile.</p>
-            <a class="text-link" href="https://ozoyegin.github.io/markit-privacy/privacy-policy.html">Privacy policy →</a>
+            <a class="text-link" href="https://ozoyegin.github.io/markit-privacy/">Privacy policy →</a>
           </article>
           <article class="card">
             <div class="icon" aria-hidden="true">↗</div>
